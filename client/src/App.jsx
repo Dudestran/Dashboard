@@ -7,11 +7,12 @@ import Login from './components/ui/Login'
 import Home from './components/ui/Home'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Signup from './components/ui/Signup'
+import ProtectedRoutes from "./components/ui/ProtectedRoutes"
 
 const browserRouter = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
+    element: <ProtectedRoutes> <Home></Home> </ProtectedRoutes>  ,
     
   },
   {
