@@ -30,7 +30,7 @@ const corsOPtions ={
 app.use(cors(corsOPtions));
 
 app.use(express.static(path.join(__dirname, "/client/dist")));
-app.get( (req,res)=>{
+app.get("/{*any}", (req,res)=>{
     res.sendFile(path.resolve(__dirname, "client", "dist", "index.html"));
 })
 
